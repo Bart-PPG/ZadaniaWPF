@@ -1,0 +1,54 @@
+﻿<Window x:Class="zad.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:zad"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <TabControl>
+        <TabItem Header="obwod figury">
+            <StackPanel>
+                <StackPanel Orientation="Vertical"></StackPanel>
+                <TextBlock>Podaj bok figury</TextBlock>
+                <TextBox x:Name="bokFigury" Margin="20"></TextBox>
+                <TextBlock>Podaj figure</TextBlock>
+                <ComboBox x:Name="figura" Margin="20">
+                    <ComboBoxItem>Kwadrat</ComboBoxItem>
+                    <ComboBoxItem>Trojkat</ComboBoxItem>
+                    <ComboBoxItem>Pieciokat</ComboBoxItem>
+                </ComboBox>
+                <Button Click="Button_Click">Oblicz pole</Button>
+            </StackPanel>
+        </TabItem>
+
+
+        <TabItem Header="kalklator walut">
+            <StackPanel>
+                <TextBlock>Podaj ilosc waluty (zł)</TextBlock>
+                <TextBox Width="300" x:Name="ilosc"></TextBox>
+                <TextBlock>wybierz na co przeliczyc </TextBlock>
+                <RadioButton GroupName="walutaRadio" x:Name="euro" IsChecked="True">Euro</RadioButton>
+                <RadioButton GroupName="walutaRadio" x:Name="frank">Franki</RadioButton>
+                <RadioButton GroupName="walutaRadio" x:Name="dolar">Dolary</RadioButton>
+                <Button Click="Button_Click_1" Width="300">Oblicz</Button>
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="temperatura">
+            <StackPanel >
+                <TextBlock>podaj temp</TextBlock>
+                <TextBox x:Name="iloscTemp"></TextBox>
+                <RadioButton GroupName="walutaTemp" x:Name="c" IsChecked="True">*C</RadioButton>
+                <RadioButton GroupName="walutaTemp" x:Name="f">F</RadioButton>
+                <RadioButton GroupName="walutaTemp" x:Name="k">K</RadioButton>
+                <Button Width="100" Click="Button_Click_2">Oblicz</Button>
+                <Separator/>
+                <RadioButton GroupName="walutaTemp" >*C</RadioButton>
+                <RadioButton GroupName="walutaTemp" >F</RadioButton>
+                <RadioButton GroupName="walutaTemp" >K</RadioButton>
+                <TextBlock>Wynik:</TextBlock>
+            </StackPanel>
+        </TabItem>
+    </TabControl>
+
+</Window>
